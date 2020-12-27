@@ -1,5 +1,5 @@
-import { getContent } from "../../src/_api/content/slug";
-import { getContents } from "../../src/_api/contents";
+import { getContent } from "../../src/api/content/slug";
+import { getContents } from "../../src/api/contents";
 import styles from '../../styles/Content.module.css';
 import { useRouter } from 'next/router'
 

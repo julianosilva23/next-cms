@@ -1,14 +1,8 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import { GoogleSpreadsheet } from 'google-spreadsheet';
 
-export default async function handler(req, res) {
-    const {
-      query: { slug },
-    } = req
-}
-
 export async function getContent(slug) {
-  const doc = new GoogleSpreadsheet('1yJEufrubZpYI6VH2LufjNJYWK2OtBXH3J14B9iRIyjY');  
+  const doc = new GoogleSpreadsheet(process.env.GOOGLE_SPREAD_SHEET);  
 
   await doc.useServiceAccountAuth({
       client_email: process.env.CLIENT_EMAIL,

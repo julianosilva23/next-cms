@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
-import { getContents } from '../src/_api/contents';
+import { getContents } from '../src/api/contents';
 
 export default function  Home({ contents }) {
 
@@ -13,7 +13,7 @@ export default function  Home({ contents }) {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Juliano Silva
+          {process.env.NEXT_PUBLIC_PROJECT_NAME}
         </h1>
         <div className={styles.grid}>
         {
